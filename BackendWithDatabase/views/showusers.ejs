@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All users</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>user name</th>
+            <th>email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% for (user of users) { %>
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.username %></td>
+                <td><%= user.email %></td>
+                <td>
+                    <form method="GET" action="/user/<%= user.id %>/edit">
+                        <button>Edit username</button>
+                    </form>
+                </td>
+                <td>
+                    <form id="deleteForm-<%= user.id %>" method="POST" action="/user/<%= user.id %>?_method=DELETE">
+                        <input type="hidden" name="password" id="passwordField-<%= user.id %>">
+                        <button type="button" onclick="askPassword('<%= user.id %>')">Delete</button>
+                    </form>
+                    
+                </td>
+            </tr>
+        <% } %>
+    </table>
+
+    
+    <script>
+        function askPassword(userId) {
+            const password = prompt("Enter your password to delete this user:");
+    
+            if (password === null || password.trim() === "") {
+                alert("Password is required to delete.");
+                return;
+            }
+    
+            // Set the password value in the hidden field and submit the form
+            document.getElementById(`passwordField-${userId}`).value = password;
+            document.getElementById(`deleteForm-${userId}`).submit();
+        }
+    </script>
+</body>
+</html>
+

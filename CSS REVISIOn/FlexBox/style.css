@@ -1,0 +1,97 @@
+/* body{
+
+    text-align: center;
+}
+div{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#container{
+    width: 800px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+
+}
+#box1{
+    background-color: red;
+}
+#box2{
+    background-color: green;
+}
+#box3{
+    background-color: blue;
+}
+#box4{
+    background-color: rgb(17, 197, 146);
+}
+#box5{
+    background-color: rgb(194, 233, 18);
+} */
+
+
+/* #outer{
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+#inner{
+    height: 200px;
+    width: 200px;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    
+    
+} */
+/* Question Color of div changes to green for viewport widtxh less than 300px */
+/* 
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+}
+@media(max-width:300px){
+    div{
+        background-color: green;
+    }
+}
+@media(min-width:300px) and (max-width:400px){
+    div{
+        background-color: pink;
+    }
+}
+@media(min-width:400px) and (max-width:600px){
+    div{
+        background-color: red;
+    }
+}
+@media(min-width:600px){
+    div{
+        background-color: blue;
+    }
+} */
+
+/* Create a simple loader using css */
+
+.loader{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 20px solid #FFE66D;
+    border-top: 20px solid #4ECFC4;
+    animation: rotator 3s ease-in-out 0s infinite normal
+}
+
+@keyframes rotator{
+    from{ transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+

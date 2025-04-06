@@ -1,0 +1,29 @@
+/* .heading{
+    background-color: yellow;
+    color: blue;
+} */
+/* .mydiv{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 5px;
+    background-color: aqua;
+} */
+
+/* #mydiv{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 5px;
+    background-color: aqua;
+} */
+
+.para{
+    background-color: red;
+}
+
+.newClass{
+    background-color: green;
+}
